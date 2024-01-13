@@ -301,50 +301,82 @@
                                 <img src="images/22.jpg" class="avatar-image img-fluid" alt="">
                                 <h2 class="text-white ms-4 mb-0">my certificates</h2>
                             </div>
-                        </div>
-                
-                        <!-- Project 1 -->
-                        <div class="col-lg-6 col-md-6 col-12 project-item" data-toggle="modal" data-target="#projectModal1">
-                            <div class="projects-thumb">
-                                <div class="projects-info">
-                                    <h3 class="projects-title">Syrian Arab Red Crescent </h3>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12 project-item" data-toggle="modal" data-target="#fullScreenModal">
+                                    <div class="projects-thumb">
+                                        <div class="projects-info">
+                                            <h3 class="projects-title">Syrian Arab Red Crescent </h3>
+                                        </div>
+                                        <img src="images/3.jpg" class="img-fluid full-screen-image" alt=" ">
+                                    </div>
                                 </div>
-                                <img src="images/3.jpg" class="img-fluid full-screen-image" alt=" ">
+                                <div class="col-lg-6 col-md-6 col-12 project-item" data-toggle="modal" data-target="#fullScreenModal">
+                                    <div class="projects-thumb">
+                                        <div class="projects-info">
+                                            <h3 class="projects-title">Syrian Computer Society  </h3>
+                                        </div>
+                                        <img src="images/3.jpg" class="img-fluid full-screen-image" alt=" ">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12 project-item" data-toggle="modal" data-target="#fullScreenModal">
+                                    <div class="projects-thumb">
+                                        <div class="projects-info">
+                                            <h3 class="projects-title">UNFP </h3>
+                                        </div>
+                                        <img src="images/3.jpg" class="img-fluid full-screen-image" alt=" ">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12 project-item" data-toggle="modal" data-target="#fullScreenModal">
+                                    <div class="projects-thumb">
+                                        <div class="projects-info">
+                                            <h3 class="projects-title">Bachelor's degree     </h3>
+                                        </div>
+                                        <img src="images/3.jpg" class="img-fluid full-screen-image" alt=" ">
+                                    </div>
+                                </div>
+            
+                                <!-- Add more images with similar structure -->
+                           
+            
+                               
+                                <!-- Add more images as needed -->
                             </div>
                         </div>
-                
-                        <!-- Project 2 -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                          
-                                <div class="projects-thumb">
-                                    <div class="projects-info">
-                                        <small class="projects-tag">Website</small>
-                                        <h3 class="projects-title">dietitian-souad</h3>
-                                    </div>
-                                    <img src="images/1.png" class="projects-image img-fluid" alt="Dietitant Souad Image">
-                                </div>
-                        
+                    </div>
+                </div>
+            
+                <!-- Full Screen Modal -->
+                <div class="modal fade" id="fullScreenModal" tabindex="-1" role="dialog" aria-labelledby="fullScreenModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="" class="img-fluid full-screen-image-content" alt="">
+                            </div>
                         </div>
+                    </div>
+                </div>
+            
+                            
+                          
+                      
+                        
+                      
                 
-                        <!-- Project 3 -->
-                     
-                
-                        <!-- Project 4 -->
-                       <!-- Full Screen Modal -->
-<div class="modal fade" id="fullScreenModal" tabindex="-1" role="dialog" aria-labelledby="fullScreenModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img src="images/22.jpg" class="img-fluid full-screen-image" alt="">
-            </div>
-        </div>
-    </div>
+                    
 </div>
 
                         </div>
                     </div>
                 </div>
-                
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        $('.full-screen-image').on('click', function () {
+                            var imageSrc = $(this).attr('src');
+                            $('#fullScreenModal').find('.full-screen-image-content').attr('src', imageSrc);
+                            $('#fullScreenModal').modal('show');
+                        });
+                    });
+                </script>
             </section>
             
             
@@ -500,9 +532,9 @@
         <script src="js/custom.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                $('.projects-image').on('click', function () {
+                $('.full-screen-image').on('click', function () {
                     var imageSrc = $(this).attr('src');
-                    $('#fullScreenModal').find('.full-screen-image').attr('src', imageSrc);
+                    $('#fullScreenModal').find('.full-screen-image-content').attr('src', imageSrc);
                     $('#fullScreenModal').modal('show');
                 });
             });
